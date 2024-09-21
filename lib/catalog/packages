@@ -1,14 +1,17 @@
 #packages:
-connectivity_plus:
+>>connectivity_plus:
     -check connection status
-    
-flutter_dotenv:
+    -Usage:
+        look_at_file: lib/core/app/connectivity_controller.dart
+        then look_at_file: lib/core/app/connectivity_checker.dart
+
+>>flutter_dotenv:
 
 
-flutter_screenutil:
+>>flutter_screenutil:
     -for a responsive usage
-
-flutter_launcher_icons:
+ 
+>>flutter_launcher_icons:
     -to change app icon
     -Usage:
         flutter_icons:
@@ -20,6 +23,16 @@ flutter_launcher_icons:
     -change_app_name:
         android: android/app/src/main/AndroidManifest.xml ==>>=>> android:label="Input Name"
         ios: ios/Runner/Info.plist ==>>=>> <key>CFBundleName</key> <string>Input Name</string>
+        run_commands:
+            -flutter pub get
+            -flutter pub run flutter_launcher_icons
 
-
+>>flutter_native_splash:
+    -to create splash view
+    -Usage:
+        look_at_file: flutter_native_splash.yaml
+        then run_commands:
+            dart run flutter_native_splash:create
+            dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+        
 

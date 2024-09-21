@@ -17,6 +17,6 @@ void main() async {
       DeviceOrientation.portraitDown,
     ],
   ).then((_) {
-    runApp(const CompleteStoreApp());
+    runApp(const ConnectivityChecker());
   });
 }

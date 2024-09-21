@@ -1,4 +1,4 @@
-import 'package:complete_store/core/app/complete_store_app.dart';
+import 'package:complete_store/core/app/connectivity_checker.dart';
 import 'package:complete_store/core/app/env_variables.dart';
 import 'package:complete_store/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';

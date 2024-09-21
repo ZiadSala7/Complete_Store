@@ -1,14 +1,25 @@
 #packages:
-
 connectivity_plus:
-    check connection status
+    -check connection status
     
 flutter_dotenv:
 
 
 flutter_screenutil:
-    for a responsive usage
+    -for a responsive usage
 
 flutter_launcher_icons:
-    to change app icon
+    -to change app icon
+    -Usage:
+        flutter_icons:
+            android: true
+            ios: true
+            image_path: "assets/images/icons/app_icon.jpg"
+            adaptive_icon_background: "#ffffff"
+            adaptive_icon_foreground: "assets/images/icons/play_store_512.png"
+    -change_app_name:
+        android: android/app/src/main/AndroidManifest.xml ==>>=>> android:label="Input Name"
+        ios: ios/Runner/Info.plist ==>>=>> <key>CFBundleName</key> <string>Input Name</string>
+
+
 

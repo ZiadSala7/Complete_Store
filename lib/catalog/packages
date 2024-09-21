@@ -1,0 +1,14 @@
+#packages:
+
+connectivity_plus:
+    check connection status
+    
+flutter_dotenv:
+
+
+flutter_screenutil:
+    for a responsive usage
+
+flutter_launcher_icons:
+    to change app icon
+

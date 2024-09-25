@@ -1,0 +1,25 @@
+>> Tharwat samy:
+    Usage
+1-  extension: flutter intl
+2-  ctrl + shift + p =>  Flutter Intl: initialize
+3-  setup for package:
+        dependencies:
+            flutter_localizations: 
+            sdk: flutter
+4-  inside MaterialApp(
+        locale: to choose the current app language
+        localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+    )
+5-  to add language: 
+        ctrl + shift + p =>  Flutter Intl: Add Locale => write abbreviation(ex : ar, en ...)
+
+
+>> Waled Mahmoud Asroo
+    Usage:
+    implement files manually and adding files.json to assets

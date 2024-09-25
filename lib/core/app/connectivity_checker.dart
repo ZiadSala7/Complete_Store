@@ -14,7 +14,7 @@ class ConnectivityChecker extends StatelessWidget {
         if (value) {
           return const MyStoreApp();
         } else {
-          return const NoNetworkScreen();
+          return const MyStoreApp();
         }
       },
     );

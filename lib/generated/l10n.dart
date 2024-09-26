@@ -190,10 +190,10 @@ class S {
     );
   }
 
-  /// `Full Name`
+  /// `Full Name :`
   String get full_name {
     return Intl.message(
-      'Full Name',
+      'Full Name :',
       name: 'full_name',
       desc: '',
       args: [],

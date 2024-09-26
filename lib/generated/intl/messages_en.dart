@@ -36,7 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create account"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-        "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "full_name": MessageLookupByLibrary.simpleMessage("Full Name :"),
         "image_removed":
             MessageLookupByLibrary.simpleMessage("The image has been Deleted."),
         "image_uploaded": MessageLookupByLibrary.simpleMessage(

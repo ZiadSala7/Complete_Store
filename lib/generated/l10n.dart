@@ -1,6 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
 
@@ -91,20 +90,20 @@ class S {
     );
   }
 
-  /// `Your Email`
+  /// `Enter your Email :`
   String get your_email {
     return Intl.message(
-      'Your Email',
+      'Enter your Email :',
       name: 'your_email',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password`
+  /// `Password :`
   String get password {
     return Intl.message(
-      'Password',
+      'Password :',
       name: 'password',
       desc: '',
       args: [],

@@ -51,7 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
-        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password": MessageLookupByLibrary.simpleMessage(": كلمة المرور"),
         "sign_up": MessageLookupByLibrary.simpleMessage("آنشاء حساب"),
         "sign_up_welcome": MessageLookupByLibrary.simpleMessage(
             "مرحبا، الرجاء إضافة المعلومات الخاصة بك"),
@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "مرحباً! الرجاء إدخال بريدك إلكتروني والبدء."),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "you_have_account": MessageLookupByLibrary.simpleMessage("لديك حساب "),
-        "your_email": MessageLookupByLibrary.simpleMessage("بريدك الالكتروني")
+        "your_email":
+            MessageLookupByLibrary.simpleMessage(": أدخل بريدك الالكتروني")
       };
 }

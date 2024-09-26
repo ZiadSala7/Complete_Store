@@ -1,5 +1,6 @@
 import 'package:complete_store/features/auth/widgets/login/custom_auth_title_info.dart';
 import 'package:complete_store/features/auth/widgets/login/custom_mode_and_lang_change_button.dart';
+import 'package:complete_store/features/auth/widgets/login/login_text_form_field_section.dart';
 import 'package:complete_store/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,6 +25,8 @@ class LoginScreenBody extends StatelessWidget {
                 title: S.of(context).login,
                 description: S.of(context).welcome,
               ),
+              SizedBox(height: 25.h),
+              LoginTextFormFieldSection(),
             ],
           ),
         ),

@@ -90,20 +90,20 @@ class S {
     );
   }
 
-  /// `Your Email`
+  /// `Enter your Email :`
   String get your_email {
     return Intl.message(
-      'Your Email',
+      'Enter your Email :',
       name: 'your_email',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password`
+  /// `Password :`
   String get password {
     return Intl.message(
-      'Password',
+      'Password :',
       name: 'password',
       desc: '',
       args: [],

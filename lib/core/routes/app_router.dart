@@ -1,4 +1,4 @@
-import 'package:complete_store/features/test_screen.dart';
+import 'package:complete_store/features/auth/screens/login_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -6,7 +6,7 @@ class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const TestScreen(),
+        builder: (context, state) => const LoginScreen(),
       ),
     ],
   );

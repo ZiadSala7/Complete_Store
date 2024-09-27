@@ -1,4 +1,4 @@
-import 'package:complete_store/core/app/widgets/builder_connectivity_method.dart';
+import 'package:complete_store/core/app/builder_connectivity_method.dart';
 import 'package:complete_store/core/routes/app_router.dart';
 import 'package:complete_store/core/styles/themes/app_themes.dart';
 import 'package:complete_store/generated/l10n.dart';

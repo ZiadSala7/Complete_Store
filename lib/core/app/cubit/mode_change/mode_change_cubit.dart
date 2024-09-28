@@ -5,8 +5,8 @@ class ModeChangeCubit extends Cubit<ModeChangeStates> {
   ModeChangeCubit() : super(DarkModeState());
 
   bool isDark = true;
-  modeChange({required bool sharedMode}) {
-    isDark = sharedMode;
+  modeChange({required bool? sharedMode}) {
+    isDark = sharedMode ?? false;
     emit(isDark ? DarkModeState() : LightModeState());
   }
 }

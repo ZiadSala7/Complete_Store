@@ -1,11 +1,16 @@
 import 'package:complete_store/constants.dart';
+import 'package:complete_store/core/app/cubit/mode_change/mode_change_cubit.dart';
+import 'package:complete_store/core/app/di/injection_controller.dart';
 import 'package:complete_store/core/common/animation/animate_do.dart';
 import 'package:complete_store/core/common/widgets/custom_linear_button.dart';
 import 'package:complete_store/core/common/widgets/custom_text_widget.dart';
 import 'package:complete_store/core/extensions/app_extensions.dart';
 import 'package:complete_store/core/fonts/font_weight_helper.dart';
+import 'package:complete_store/core/services/prefs_key.dart';
+import 'package:complete_store/core/services/shared_pref.dart';
 import 'package:complete_store/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomModeAndLangChangeButton extends StatelessWidget {
@@ -21,7 +26,13 @@ class CustomModeAndLangChangeButton extends StatelessWidget {
         CustomFadeInLeft(
           duration: commonDuration,
           child: CustomLinearButton(
-            onPressed: () {},
+            onPressed: () async {
+              SharedPref().setBoolean(PrefsKey.themeMode,
+                  !BlocProvider.of<ModeChangeCubit>(context).isDark);
+              getIt<ModeChangeCubit>().modeChange(
+                sharedMode: SharedPref().getBoolean(PrefsKey.themeMode),
+              );
+            },
             child: const Icon(
               Icons.light_mode,
             ),

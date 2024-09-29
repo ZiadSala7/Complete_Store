@@ -4,10 +4,11 @@ import 'package:complete_store/core/common/widgets/custom_linear_button.dart';
 import 'package:complete_store/core/common/widgets/custom_text_widget.dart';
 import 'package:complete_store/core/extensions/app_extensions.dart';
 import 'package:complete_store/core/fonts/font_weight_helper.dart';
+import 'package:complete_store/core/routes/app_navigation.dart';
+import 'package:complete_store/features/auth/screens/login_screen.dart';
 import 'package:complete_store/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class RegisterButtonsSection extends StatelessWidget {
   const RegisterButtonsSection({super.key});
@@ -34,7 +35,7 @@ class RegisterButtonsSection extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 50.w),
             child: InkWell(
               onTap: () {
-                context.pushReplacement('/');
+                AppNavigation.pushReplacement(const LoginScreen(), context);
               },
               child: CustomTextWidget(
                 text: S.of(context).you_have_account,

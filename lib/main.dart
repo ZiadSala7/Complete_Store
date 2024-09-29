@@ -1,4 +1,4 @@
-import 'package:complete_store/core/app/connectivity_checker.dart';
+import 'package:complete_store/core/app/connectivity/connectivity_checker.dart';
 import 'package:complete_store/core/app/di/injection_controller.dart';
 import 'package:complete_store/core/app/env_variables.dart';
 import 'package:complete_store/core/services/shared_pref.dart';

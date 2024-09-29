@@ -2,14 +2,14 @@ import 'package:complete_store/core/app/builder_connectivity_method.dart';
 import 'package:complete_store/core/app/cubit/mode_change/mode_change_cubit.dart';
 import 'package:complete_store/core/app/cubit/mode_change/mode_change_states.dart';
 import 'package:complete_store/core/app/di/injection_controller.dart';
-import 'package:complete_store/core/language/localization_delegates_method.dart';
-import 'package:complete_store/core/routes/app_router.dart';
 import 'package:complete_store/core/services/prefs_key.dart';
 import 'package:complete_store/core/services/shared_pref.dart';
 import 'package:complete_store/core/styles/themes/app_themes.dart';
+import 'package:complete_store/features/auth/screens/login_screen.dart';
 import 'package:complete_store/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyStoreApp extends StatelessWidget {
@@ -28,23 +28,32 @@ class MyStoreApp extends StatelessWidget {
             ),
         ),
       ],
-      child: BlocBuilder<ModeChangeCubit, ModeChangeStates>(
-        buildWhen: (previous, current) {
-          return previous != current;
-        },
-        builder: (context, state) {
-          final modeCubit = BlocProvider.of<ModeChangeCubit>(context);
-          return ScreenUtilInit(
-            child: MaterialApp.router(
-              routerConfig: AppRouter.appRouter,
+      child: ScreenUtilInit(
+        child: BlocBuilder<ModeChangeCubit, ModeChangeStates>(
+          buildWhen: (previous, current) {
+            return previous != current;
+          },
+          builder: (context, state) {
+            final cubit = BlocProvider.of<ModeChangeCubit>(context);
+            return MaterialApp(
+              home: const LoginScreen(),
               debugShowCheckedModeBanner: false,
-              theme: modeCubit.isDark ? darkModeTheme() : lightModeTheme(),
+              theme: cubit.isDark ? darkModeTheme() : lightModeTheme(),
+              locale: cubit.isEnglish ? const Locale('en') : const Locale('ar'),
               builder: builderConnectivityMethod,
-              localizationsDelegates: localizationDelegatesMethod,
-              supportedLocales: S.delegate.supportedLocales,
-            ),
-          );
-        },
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale('en'),
+                Locale('ar'),
+              ],
+            );
+          },
+        ),
       ),
     );
   }

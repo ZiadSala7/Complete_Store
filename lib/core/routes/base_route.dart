@@ -1,8 +1,7 @@
-import 'package:complete_store/features/auth/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class BaseRoute extends PageRouteBuilder<dynamic> {
-  BaseRoute({required this.page, required LoginScreen child})
+  BaseRoute({required this.page})
       : super(
           pageBuilder: (BuildContext context, Animation<double> animation,
                   Animation<double> secondaryAnimation) =>

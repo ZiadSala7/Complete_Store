@@ -1,7 +1,7 @@
+import 'package:complete_store/core/language/app_localizations.dart';
 import 'package:complete_store/core/styles/themes/color_extensions.dart';
 import 'package:complete_store/core/styles/themes/my_assets_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 extension ContextExt on BuildContext {
   // color
@@ -11,16 +11,8 @@ extension ContextExt on BuildContext {
       Theme.of(this).extension<MyAssetsExtensions>()!;
   // textStyle
   TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
-  // go_router
-  Future<Object?> pushRouter(String path) {
-    return GoRouter.of(this).push(path);
-  }
-
-  Future<Object?> pushReplacementRouter(String path) {
-    return GoRouter.of(this).pushReplacement(path);
-  }
-
-  void popRouter() {
-    return GoRouter.of(this).pop();
+  // localization
+  String translate(String langkey) {
+    return AppLocalizations.of(this)!.translate(langkey).toString();
   }
 }

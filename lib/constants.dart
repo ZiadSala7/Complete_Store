@@ -1,1 +1,1 @@
-const int commonDuration = 700;
+const int commonDuration = 800;

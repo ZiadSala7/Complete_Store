@@ -2,8 +2,8 @@ import 'package:complete_store/core/app/builder_connectivity_method.dart';
 import 'package:complete_store/core/app/cubit/mode_change/mode_change_cubit.dart';
 import 'package:complete_store/core/app/cubit/mode_change/mode_change_states.dart';
 import 'package:complete_store/core/app/di/injection_controller.dart';
-import 'package:complete_store/core/services/prefs_key.dart';
-import 'package:complete_store/core/services/shared_pref.dart';
+import 'package:complete_store/core/services/shared/prefs_key.dart';
+import 'package:complete_store/core/services/shared/shared_pref.dart';
 import 'package:complete_store/core/styles/themes/app_themes.dart';
 import 'package:complete_store/features/auth/screens/login_screen.dart';
 import 'package:complete_store/generated/l10n.dart';
@@ -23,6 +23,9 @@ class MyStoreApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => getIt<ModeChangeCubit>()
+            ..langChange(
+              sharedLang: SharedPref().getBoolean(PrefsKey.isEnglish),
+            )
             ..modeChange(
               sharedMode: SharedPref().getBoolean(PrefsKey.themeMode),
             ),
